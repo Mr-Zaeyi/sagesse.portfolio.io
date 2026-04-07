@@ -273,6 +273,21 @@
         <span class="text-xs font-black uppercase text-red-400 flex items-center gap-2">Voir détails →</span>
       </div>
 
+      <div class="bg-slate-900 border border-white/5 rounded-[2.5rem] p-7 hover:bg-slate-800 transition-all cursor-pointer hover:border-cyan-500/30 shadow-xl flex flex-col" onclick="showPage('antennes-detail')">
+        <div class="flex items-start justify-between mb-5">
+          <div class="text-4xl">📶</div>
+          <span class="text-xs font-black text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 rounded-full">SAÉ Télécoms</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3 uppercase">Antenne Patch IoT</h3>
+        <p class="text-gray-500 text-sm mb-5 italic flex-1">Conception AWR, rétro-ingénierie VNA et bilan de liaison Sigfox à 868 MHz.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag">AWR</span>
+          <span class="tag">VNA R54</span>
+          <span class="tag">Sigfox</span>
+        </div>
+        <span class="text-xs font-black uppercase text-cyan-400 flex items-center gap-2">Voir détails →</span>
+      </div>
+      
     </div>
   </div>
 
@@ -529,6 +544,52 @@
     <div class="mt-4"><a href="Vulgarisation_Projet_MugOChaud.pdf" target="_blank" class="px-6 py-3 bg-red-600 text-white font-black uppercase text-xs tracking-widest rounded-xl hover:bg-red-700 transition-all shadow-lg inline-flex">⬇ Télécharger PDF</a></div>
   </div>
 
+  <div id="antennes-detail" class="page pt-36 pb-24 px-8 max-w-5xl mx-auto">
+    <button onclick="showPage('experiences')" class="flex items-center gap-2 text-gray-500 hover:text-white mb-10 transition-colors text-sm">← Retour aux projets</button>
+    
+    <div class="grid md:grid-cols-2 gap-12 mb-12">
+      <div class="space-y-6">
+        <span class="text-xs font-black text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full uppercase tracking-widest">Ingénierie RF — Antenne Patch IoT</span>
+        <h1 class="text-5xl font-black text-white tracking-tighter uppercase">Antenne <span class="text-blue-500">Sigfox.</span></h1>
+        <p class="text-gray-400 leading-relaxed text-sm text-justify">Conception et optimisation d'une antenne patch 868 MHz sur substrat FR4. Utilisation de la rétro-ingénierie pour identifier les constantes réelles du matériau et atteindre une adaptation parfaite pour le réseau IoT Sigfox.</p>
+        
+        <div class="space-y-2">
+          <div class="flex items-center gap-3 bg-slate-900 border border-white/5 p-3 rounded-xl"><span class="text-blue-400 text-xs">✓</span><span class="text-xs text-gray-300">Résonance 868 MHz — Calage précis via modèle AWR</span></div>
+          <div class="flex items-center gap-3 bg-slate-900 border border-white/5 p-3 rounded-xl"><span class="text-blue-400 text-xs">✓</span><span class="text-xs text-gray-300">Adaptation S11 = -17.54 dB — Perte de retour minimale</span></div>
+          <div class="flex items-center gap-3 bg-slate-900 border border-white/5 p-3 rounded-xl"><span class="text-blue-400 text-xs">✓</span><span class="text-xs text-gray-300">Reverse Engineering — Identification ε<sub>r</sub> et tan δ réels</span></div>
+          <div class="flex items-center gap-3 bg-slate-900 border border-white/5 p-3 rounded-xl"><span class="text-blue-400 text-xs">✓</span><span class="text-xs text-gray-300">Gain G ≈ 3.5 dBi — Bilan de liaison Sigfox validé</span></div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/50 border border-white/5 rounded-3xl p-8 flex flex-col justify-center gap-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center p-4 bg-blue-500/10 border border-blue-500/20 rounded-2xl">
+            <p class="text-blue-400 font-black text-2xl">-17.54</p>
+            <p class="text-gray-500 text-xs mt-1">📊 S11 (dB)</p>
+          </div>
+          <div class="text-center p-4 bg-purple-500/10 border border-purple-500/20 rounded-2xl">
+            <p class="text-purple-400 font-black text-2xl">3.5</p>
+            <p class="text-gray-500 text-xs mt-1">📡 Gain (dBi)</p>
+          </div>
+        </div>
+        <div class="p-4 bg-blue-500/10 border border-blue-500/20 rounded-2xl text-center">
+          <p class="text-blue-400 font-black">✅ RÉSONANCE 868 MHz — OK</p>
+          <p class="text-gray-600 text-xs mt-1">Conforme au cahier des charges Sigfox</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-black text-white uppercase mb-5">📄 Rapport de vulgarisation & SAE :</h2>
+    <div class="bg-slate-900 border border-white/5 rounded-3xl overflow-hidden shadow-2xl mb-6">
+      <iframe src="Vulgarisation_Projet_Antennes.pdf" width="100%" height="600" style="border:none;"></iframe>
+    </div>
+    
+    <div class="flex flex-wrap gap-4">
+      <a href="Vulgarisation_Projet_Antennes.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-black uppercase text-xs tracking-widest rounded-xl hover:bg-blue-700 transition-all shadow-lg inline-flex">⬇ Télécharger Rapport</a>
+      <a href="Presentation SAE IoT-Antenne - 2026.pdf" target="_blank" class="px-6 py-3 bg-slate-800 text-white font-black uppercase text-xs tracking-widest rounded-xl hover:bg-slate-700 transition-all border border-white/10 inline-flex">⬇ Présentation SAE</a>
+    </div>
+  </div>
+
   <!-- ======== EXPÉRIENCES ======== -->
   <div id="experiences" class="page pt-36 pb-24 px-8 max-w-6xl mx-auto">
     <h1 class="text-6xl font-black text-white mb-4 uppercase">Expériences & <span class="text-blue-600">Parcours.</span></h1>
@@ -667,7 +728,7 @@
   <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="hidden fixed bottom-10 right-10 z-50 w-12 h-12 bg-blue-600 text-white rounded-2xl items-center justify-center shadow-2xl hover:bg-blue-700 hover:-translate-y-2 transition-all">↑</button>
 
   <script>
-    const PAGES = ['accueil','apropos','formation','projets','ecg-detail','enregistreur-detail','hf-detail','snake-detail','mug-detail','experiences','cv-page','contact'];
+    const PAGES = ['accueil','apropos','formation','projets','ecg-detail','enregistreur-detail','hf-detail','snake-detail','mug-detail', 'antennes-detail', 'experiences','cv-page','contact'];
     function showPage(id) {
       PAGES.forEach(p => { const el = document.getElementById(p); if(el) el.classList.remove('active'); });
       const t = document.getElementById(id);
